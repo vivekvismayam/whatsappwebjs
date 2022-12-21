@@ -80,7 +80,7 @@ client.on("message", (msg) => {
         console.log("Ignoring Status or Group message "+msg.id.remote+" | Messge from "+msg.from + "Message: " + msg.body)
     } else {
       //console.log("Msg received " + JSON.stringify(msg));
-      console.log("Msg received " + msg.from + " msg " + msg.body);
+      console.log("Msg received From " + msg.from + " Message " + msg.body);
       sendReply(msg);
     }
   } else {
@@ -96,7 +96,7 @@ client.on("message", (msg) => {
       if (item[0] == msg.body) {
         //msg.reply(item[1]);
         client.sendMessage(msg.from, item[1]);
-        console.log("sent | Message " + item[0] + "reply " + item[1]);
+        console.log("Success! | Message Received " + item[0] + " | Reply Sent" + item[1]);
       }
     });
   }
