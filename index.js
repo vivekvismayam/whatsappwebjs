@@ -87,7 +87,7 @@ client.on("message", (msg) => {
         dndEnd(msg);
       }else if (dndStatus) {
         console.log("DND Is Turned ON" + msg.from +" - "+msg._data.notifyName+ " Message " + msg.body);
-        console.log("Message Full"+JSON.stringify(msg))
+        //console.log("Message Full"+JSON.stringify(msg))
         dndMessages.push("\n|"+msg.from+" - "+msg._data.notifyName+" : "+msg.body+"  |");
         sendReply(msg);
       }
