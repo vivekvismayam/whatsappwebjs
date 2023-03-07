@@ -156,14 +156,14 @@ function dndStart(msg) {
   dndStatus=true;
   client.sendMessage(
     msg.from,
-    '*DND STARTED SUCCESSFULLY* \n To STOP the DND, Send Message  *"START SERVICE"*. Client  always listens to Admin! '
+    '*DND STARTED SUCCESSFULLY* \n To STOP the DND, Send Message  *"DND END"*. Client  always listens to Admin! '
   );
   console.log("DND STARTED"+dndReason);
 }
 function dndEnd(msg) {
   let messageString=dndMessages.toString();
   console.log("Admin requested for DND END"+messageString);
-  msg.reply("Admin requested to *START END*\n------ ENDING DND ------");
+  msg.reply("Admin requested  *DND END*\n------ ENDING DND ------");
   serviceStatus = true;
   dndStatus=false;
   dndReason='';
